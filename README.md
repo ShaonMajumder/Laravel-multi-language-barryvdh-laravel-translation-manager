@@ -7,10 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Pros
+- You do not have to replace any internal class
+- you can access translation in laravel way
+- WebInterface is user friendly
+- Supports wide range of laravel and php versions comparitively
+
+## Cons
+- Have to backup everytime before publishing or writing to langauge file; 
+- handle `Lang` directory with caution
+
 ## Description
-It does not replace rather it can replace existing lang file.
-Can manage and insert new translation through webinterface and save them in db.
-Later can export in lang file, it replaces existing lang file.
+- Does not replace any internal file, you can access translation in laravel way
+- It does not replace rather it can replace existing lang file.
+- Can manage and insert new translation through webinterface and save them in db.
+- Later can export in lang file, it replaces existing lang file.
 
 ## Installation
 ### set up laravel
