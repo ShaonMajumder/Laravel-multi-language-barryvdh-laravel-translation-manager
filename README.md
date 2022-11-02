@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Description
+It does not replace rather it can replace existing lang file.
+Can manage and insert new translation through webinterface and save them in db.
+Later can export in lang file, it replaces existing lang file.
+
 ## Installation
 ### set up laravel
 ```bash
