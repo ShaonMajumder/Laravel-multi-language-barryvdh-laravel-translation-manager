@@ -89,6 +89,19 @@ php artisan serve
 - login
 - navigate to http://127.0.0.1:8000/translations
 
+### To set hardcoded language
+AppServiceProvider.php edit
+```php
+/**
+ * Bootstrap any application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    app()->setLocale('bn');
+}
+```
 ## Usage
 ### Precaution
 - Always backup your database before importing
