@@ -7,5 +7,4 @@ return array (
   'rememberme' => 'Remember Me',
   'submit' => 'Login',
   'forgotpassword' => 'Forgot Your Password?',
-  'SSO' => 'Single Sign On',
 );

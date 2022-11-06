@@ -33,6 +33,7 @@ cd Laravel-multi-language-barryvdh-laravel-translation-manager
 ```bash
 composer require barryvdh/laravel-translation-manager
 ```
+
 ### Set env
 cp .env.example .env
 code .env
@@ -51,6 +52,12 @@ php artisan vendor:publish --provider="Barryvdh\TranslationManager\ManagerServic
 In order to edit the default template, the views must be published as well. The views will then be placed in resources/views/vendor/translation-manager.
 ```bash
 php artisan vendor:publish --provider="Barryvdh\TranslationManager\ManagerServiceProvider" --tag=views
+```
+
+### custom functionality
+for custom function override
+```bash
+composer dump-autoload
 ```
 
 ### NB
