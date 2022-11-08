@@ -66,7 +66,8 @@ Routes are added in the ServiceProvider. You can set the group parameters for th
 This example will make the translation manager available at http://yourdomain.com/translations
 
 ### Middleware / Auth
-The configuration file by default only includes the auth middleware, but the latests changes in Laravel 5.2 makes it that session variables are only accessible when your route includes the web middleware. In order to make this package work on Laravel 5.2, you will have to change the route/middleware setting from the default
+The configuration file by default only includes the auth middleware, but the latests changes in Laravel 5.2 makes it that session variables are only accessible when your route includes the web middleware. In order to make this package work on Laravel 5.2, you will have to change the route/middleware setting from the default<br>
+config/translation-manager.php :
 ```php
     'route' => [
         'prefix' => 'translations',
