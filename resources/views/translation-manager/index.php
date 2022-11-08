@@ -139,6 +139,14 @@
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <div class="form-group">
                 <div class="row">
+                    <div class="col-sm-2">
+                        <label>Select Project</label>
+                        <select id="project" name="project">
+                            <option value="main-project">main-project</option>
+                            <option value="another-project">another-project</option>
+                        </select>
+                    </div>
+
                     <div class="col-sm-3">
                         <select name="replace" class="form-control">
                             <option value="0">Append new translations</option>
@@ -162,8 +170,8 @@
             <form class="form-inline form-publish" method="POST" action="<?php echo action('\Barryvdh\TranslationManager\Controller@postPublish', $group) ?>" data-remote="true" role="form" data-confirm="Are you sure you want to publish the translations group '<?php echo $group ?>? This will overwrite existing language files.">
                 <label>Select Project</label>
                 <select id="project" name="project">
-                    <option value="kx-admin">KX-Admin</option>
-                    <option value="kx-merchant">KX-Merchant</option>
+                    <option value="main-project">main-project</option>
+                    <option value="another-project">another-project</option>
                 </select>
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <button type="submit" class="btn btn-info" data-disable-with="Publishing.." >Publish translations</button>

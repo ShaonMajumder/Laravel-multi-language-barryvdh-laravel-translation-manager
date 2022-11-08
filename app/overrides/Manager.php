@@ -97,7 +97,7 @@ class Manager
                     $translations = \Lang::getLoader()->load($locale, $group);
                 } else {
                     $translations = include $file;
-                    $group = 'vendor/'.$vendorName;
+                    // $group = 'vendor/'.$vendorName; // edited
                 }
 
                 if ($translations && is_array($translations)) {
@@ -277,8 +277,7 @@ class Manager
                     
                     if (isset($groups[$group])) {
                         $translations = $groups[$group];
-                        $path = $basePath; //?? $this->app['path.lang'];
-                        // dd($path);
+                        $path = $basePath; //?? $this->app['path.lang']; //edited
 
                         $locale_path = $locale.DIRECTORY_SEPARATOR.$group;
                         if ($vendor) {

@@ -114,7 +114,15 @@ class Controller extends BaseController
     public function postImport(Request $request)
     {
         $replace = $request->get('replace', false);
-        $counter = $this->manager->importTranslations($replace);
+        $base = null;
+        if(request()->project){
+            if(request()->project == 'main-project'){
+                
+            } else if(request()->project == 'another-project'){
+                $base = base_path() .  env('ANOTHER_PROJECT_DIRECTORY','/../demo2/resources/lang') ;
+            }
+        }
+        $counter = $this->manager->importTranslations($replace,$base);
 
         return ['status' => 'ok', 'counter' => $counter];
     }
@@ -137,10 +145,10 @@ class Controller extends BaseController
         
         $basePath = null;
         if(request()->project){
-            if(request()->project == 'kx-admin'){
+            if(request()->project == 'main-project'){
                 
-            } else if(request()->project == 'kx-merchant'){
-                $basePath = base_path() .  env('KX_MERCHANT_DIRECTORY','/../demo2/resources/lang') ;
+            } else if(request()->project == 'another-project'){
+                $basePath = base_path() .  env('ANOTHER_PROJECT_DIRECTORY','/../demo2/resources/lang') ;
             }
         }
         $this->manager->exportTranslations($group, $json, $basePath);
